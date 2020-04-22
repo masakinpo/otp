@@ -190,10 +190,11 @@ func Generate(opts GenerateOpts) (*otp.Key, error) {
 		v.Set("secret", b32NoPadding.EncodeToString(secret))
 	}
 
-	v.Set("issuer", opts.Issuer)
-	v.Set("period", strconv.FormatUint(uint64(opts.Period), 10))
-	v.Set("algorithm", opts.Algorithm.String())
-	v.Set("digits", opts.Digits.String())
+// comment out unnecessary query paramter 
+//	v.Set("issuer", opts.Issuer)
+//	v.Set("period", strconv.FormatUint(uint64(opts.Period), 10))
+//	v.Set("algorithm", opts.Algorithm.String())
+//	v.Set("digits", opts.Digits.String())
 
 	u := url.URL{
 		Scheme:   "otpauth",
