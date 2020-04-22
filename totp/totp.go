@@ -26,7 +26,6 @@ import (
 	"encoding/base32"
 	"math"
 	"net/url"
-	"strconv"
 	"time"
 )
 
